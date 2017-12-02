@@ -12,21 +12,22 @@ namespace Lambdas
                     new Person { FirstName = "Joe", LastName = "Bloggs", Age = 20 },
                     new Person { FirstName = "Steven", LastName = "Preece", Age = 25 },
                     new Person { FirstName = "Jim", LastName = "Chap", Age = 30 },
-                    new Person { FirstName = "Andy", LastName = "Barrow", Age = 35 }
-                }                                    
+                    new Person { FirstName = "Andy", LastName = "Barrow", Age = 35 },
+                    new Person { FirstName = "John", LastName = "Johnson", Age = 40 }
+                }
             );
 
-            foreach (Person p in myRegister) 
+            foreach (Person p in myRegister)
             {
                 Console.Write(p.ToString());
             }
             Console.WriteLine();
 
-            foreach (Person p in myRegister.Filter(p => (p?.Age ?? 0) > 20)) 
+            foreach (Person p in myRegister.Filter(p => (p?.Age ?? 0) > 20))
             {
                 Console.Write(p.ToString());
-            }   
-            Console.WriteLine();    
+            }
+            Console.WriteLine();
         }
     }
 }
