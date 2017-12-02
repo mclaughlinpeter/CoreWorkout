@@ -16,17 +16,17 @@ namespace Lambdas
                 }                                    
             );
 
-            foreach (Person p in myRegister.GetAll()) 
+            foreach (Person p in myRegister) 
             {
                 Console.Write(p.ToString());
-            }      
-
+            }
             Console.WriteLine();
 
             foreach (Person p in myRegister.Filter(p => (p?.Age ?? 0) > 20)) 
             {
                 Console.Write(p.ToString());
             }   
+            Console.WriteLine();    
         }
     }
 }
